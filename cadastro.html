@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/cadastro.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light" style="background-color: #47718f">
+        <a class="navbar-brand" href="#">
+            <img src="img/home.png" width="30" height="30" class="d-inline-block align-top" alt="Imagem home" onclick="home()">
+        </a>
+        <button class="btn btn-outline-dark" name="Consulta" style="background-color: #47718f" onclick="consulta()">Consulta</button>
+    </nav>
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Cadastro de Produtos</h1>
+            <p class="lead">Cadastre seu produto aqui</p>
+        </div>
+    </div>
+    <!--Formulario para cadastro-->
+    <div class="container">
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6 offset-md-3">
+                    <label for="inputNome">Nome:</label>
+                    <input type="name" class="form-group form-control" id="inputNome">
+                </div>
+                <div class="form-group col-md-6 offset-md-3">
+                    <label for="inputCategoria">Categoria:</label>
+                    <select class="custom-select form-group form-control" id="inputCategoria">
+                        <option value="Varejo">Varejo</option>
+                        <option value="Atacado">Atacado</option>
+                        <option value="Encomenda">Encomenda</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6 offset-md-3">
+                    <label for="inputDescricao">Descrição:</label>
+                    <textarea class="form-group form-control" id="inputDescricao" rows="3"></textarea>
+                </div>
+            </div>
+        </form>
+        <div class="form-group d-flex justify-content-center">
+            <div class="row">
+                <div class="col-sm-6">
+                    <button class="btn btn-outline-dark" id="Cancelar" style="background-color: #659ac0" onclick="cancelar()">Cancelar</button>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn btn-outline-dark" id="Registrar" onclick="cadastrar()">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/cadastroScript.js"></script>
+</body>
+
+</html>
